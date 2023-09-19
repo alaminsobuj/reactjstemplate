@@ -1,7 +1,24 @@
 import React from 'react';
 import GLightbox from 'glightbox';
 const content = () => {
-
+    
+    const myGallery = GLightbox({
+        elements: [
+            {
+                'href': 'assets/img/clients/client-1.png',
+                'type': 'image',
+                'title': 'My Title',
+                'description': 'Example',
+            },
+            {
+                'href': 'assets/img/clients/client-2.png',
+                'type': 'image',
+                'title': 'My Title',
+                'description': 'Example',
+            },
+        ],
+        autoplayVideos: true,
+    });
     
   return (
     <div>
@@ -9,14 +26,14 @@ const content = () => {
             
             <section id="clients" className="clients section-bg">
                 <div className="container">
-
+                    <button onClick={()=>myGallery.open()}>click</button>
                     <div className="row" data-aos="zoom-in">
 
-                    <div className="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                    <div  className="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
                         <img src="assets/img/clients/client-1.png" className="img-fluid" alt="" />
                     </div>
 
-                    <div className="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                    <div  className="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
                         <img src="assets/img/clients/client-2.png" className="img-fluid" alt="" />
                     </div>
 
