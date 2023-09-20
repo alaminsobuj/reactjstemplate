@@ -1,38 +1,54 @@
 import React from 'react';
 import GLightbox from 'glightbox';
+import Client from './Client';
+import Clipboard from './Clipboard';
 const content = () => {
     
-    const myGallery = GLightbox({
-        elements: [
-            {
-                'href': 'assets/img/clients/client-1.png',
-                'type': 'image',
-                'title': 'My Title',
-                'description': 'Example',
-            },
-            {
-                'href': 'assets/img/clients/client-2.png',
-                'type': 'image',
-                'title': 'My Title',
-                'description': 'Example',
-            },
-        ],
-        autoplayVideos: true,
-    });
+    // const myGallery = GLightbox({
+    //     elements: [
+    //         {
+    //             'href': 'assets/img/clients/client-1.png',
+    //             'type': 'image',
+    //             'title': 'My Title',
+    //             'description': 'Example',
+    //         },
+    //         {
+    //             'href': 'assets/img/clients/client-2.png',
+    //             'type': 'image',
+    //             'title': 'My Title',
+    //             'description': 'Example',
+    //         },
+    //     ],
+    //     autoplayVideos: true,
+    // });
+
+    // const data={
+
+    // }
     
+    const myArray = ['apple', 'banana', 'orange'];
+
+    const myList = myArray.map((item) => <p>{item}</p>)
+  
   return (
-    <div>
+    <>
+
+
         <main id="main">
-            
+        <Clipboard />
+            {myList }
             <section id="clients" className="clients section-bg">
                 <div className="container">
-                    <button onClick={()=>myGallery.open()}>click</button>
+    
                     <div className="row" data-aos="zoom-in">
 
-                    <div  className="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                        <img src="assets/img/clients/client-1.png" className="img-fluid" alt="" />
-                    </div>
-
+                    <Client  imageurl={'assets/img/clients/client-1.png'} imagename={'client-1'}/>
+                    <Client  imageurl={'assets/img/clients/client-2.png'} imagename={'client-2'}/>
+                    <Client  imageurl={'assets/img/clients/client-3.png'} imagename={'client-3'}/>
+                    <Client  imageurl={'assets/img/clients/client-4.png'} imagename={'client-4'}/>
+                    <Client  imageurl={'assets/img/clients/client-5.png'} imagename={'client-5'}/>
+                    <Client  imageurl={'assets/img/clients/client-6.png'} imagename={'client-6'}/>
+{/* 
                     <div  className="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
                         <img src="assets/img/clients/client-2.png" className="img-fluid" alt="" />
                     </div>
@@ -51,7 +67,7 @@ const content = () => {
 
                     <div className="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
                         <img src="assets/img/clients/client-6.png" className="img-fluid" alt="" />
-                    </div>
+                    </div> */}
 
                     </div>
 
@@ -667,7 +683,7 @@ const content = () => {
             </section>
         </main>
 
-    </div>
+    </>
   )
 }
 export default content
