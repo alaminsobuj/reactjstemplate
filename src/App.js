@@ -2,7 +2,7 @@ import logo from './logo.svg';
 // import './App.css';
 // import Profile from './About';
 import Home from './Home';
-
+import Error from './pages/Error';
 
 
 // import Contact from './Contact';
@@ -17,6 +17,7 @@ function App() {
       <BrowserRouter>
          <Routes>
             <Route path='/' element={<Home/>}>Home</Route>
+            <Route path='*' element={<Error/>}></Route>
             {/* <Route path='/Profile' element={<Profile/>}>About</Route> */}
             {/* <Route path='/Contact' element={<Contact/>}>Contact</Route> */}
          </Routes>
