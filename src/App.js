@@ -11,6 +11,7 @@ import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 function App() {
   return (
+    <React.StrictMode>
     <React.Fragment>
       {/* <h1>alskdfjasdf</h1> */}
 
@@ -23,6 +24,7 @@ function App() {
          </Routes>
       </BrowserRouter>
       </React.Fragment>
+      </React.StrictMode>
   );
 }
 
