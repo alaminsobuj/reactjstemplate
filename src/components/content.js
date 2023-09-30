@@ -47,6 +47,28 @@ const myList = myArray.map((item) => <p>{item}</p>)
 //     <Client  imageurl={info.image} imagename={info.imagename}/>
 //   );
 // console.log(client);
+
+const getScore=(score)=>score*20
+// console.log(getScore(5));
+const totalScore=(score1,score2)=>score1+score2;
+// console.log(totalScore(100,10));
+const multilineneed=(score1,score2)=>{
+    
+    return score1+score2;
+};
+// console.log(multilineneed(100,10));
+
+const getRepositories=()=>{
+    return fetch(`https://api.github.com/users/alaminsobuj/repos`)
+           .then((response)=>response.json())
+           .catch((error)=>error)
+} 
+
+// console.log(getRepositories());
+
+const arrays =[10,100,300,20,400];
+const newArrayArrowfunc=arrays.filter( (item)=>item >100)
+console.log(newArrayArrowfunc);
   return (
     <>
 
